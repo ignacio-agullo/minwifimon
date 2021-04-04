@@ -6,12 +6,12 @@
 # This script monitors that the Internet connection is really working by frequently reading from Internet the public IP address.
 # WARNING: In order to work, the script needs the address of a public Internet resource that returns the public IP address.
 # WARNING: This address must be assigned to variable 'recurso' right after the "Start" comment.  IT WON'T WORK WITHOUT IT.
-# Depending on the public IP address read, the script does
+# Depending on the public IP address read, the script does:
 # -If the IP address is blank and the Wi-Fi is switched on, it switches it off and then on again.
 # -If the IP address is blank and the Wi-Fi is switched off, it switches it on.
 # -If the IP address matches that of the previous read, it doesn't register anything.
 # -If the IP address is different from the previous read, the change is registered.
-# Sintax: monitor_ip.sh [timeout]
+# Sintax: ipmon.sh [timeout]
 # The timeout is for the wait on the IP address, in seconds; default value is 10.
 # It stops on receiving any of the signals SIGHUP SIGINT SIGTERM
 # SIGHUP: Notification of the terminal being closed.
