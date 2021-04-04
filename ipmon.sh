@@ -69,7 +69,7 @@ else
   if [[ $ip_nova = *title* ]]
   then
     ip_nova="${ip_nova#*<title>}"
-    ip_nova="descoñecida por erro ${ip_nova%%</title>*}"
+    ip_nova="unknown because of error ${ip_nova%%</title>*}"
   fi
   echo `date '+%F %H:%M:%S'`" Connected with public IP $ip_nova"
 fi
@@ -87,7 +87,7 @@ do
   if [[ $ip_nova = *title* ]]
   then
     ip_nova="${ip_nova#*<title>}"
-    ip_nova="descoñecida por erro ${ip_nova%%</title>*}"
+    ip_nova="unknown because of error ${ip_nova%%</title>*}"
   fi
   radio=$(nmcli -f WIFI -t -c no r)
   if [ "$ip_vella" = "$ip_nova" ]
