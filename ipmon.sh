@@ -4,9 +4,6 @@
 # 01-11-2020: Last update
 # This is a tool for dealing with faulty Internet connections that drop while being nominally up.
 # This script monitors that the Internet connection is really working by frequently reading from Internet the public IP address.
-# In case the Internet connection is not working, Wi-Fi status is examined:
-# -If down, it is turned up.
-# -If up, it is turned down and then up again.
 # WARNING: In order to work, the script needs the address of a public Internet resource that returns the public IP address.
 # WARNING: This address must be assigned to variable 'recurso' right after the "Start" comment.  IT WON'T WORK WITHOUT IT.
 # Depending on the public IP address read, the script does
