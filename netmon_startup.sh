@@ -1,7 +1,7 @@
 #!/bin/bash
 # Minimal Network Monitor from Startup, by Ignacio Agulló under GPLv3.0
-# 25-8-2020: Creado
-# 27-9-2020: Última actualización.
+# 25-8-2020: Created
+# 27-9-2020: Last update
 # This is a tool for dealing with faulty Internet connections that drop while being nominally up.
 # This script monitors that the Internet connection is really working by frequently reading from Internet the public IP address.
 # WARNING: In order to work, the script needs the address of a public Internet resource that returns the public IP address.
@@ -12,7 +12,7 @@
 # SIGHUP: Notification of the terminal being closed.
 # SIGTERM: Termination request sent by the system.
 #Signal trap
-trap terminar SIGHUP SIGINT SIGTERM
+trap terminar SIGHUP SIGTERM
 #Functions
 function terminar {
 	continuar=false
@@ -50,7 +50,7 @@ if [ -e $rexistro ]
 then
   >&2 echo "Minimal Network Monitor from Startup: Error, the file $rexistro already exists"
 else
-  echo 'inimal Network Monitor from Startup, by Ignacio Agulló under GPLv3.0' > $rexistro
+  echo 'Minimal Network Monitor from Startup, by Ignacio Agulló under GPLv3.0' > $rexistro
   echo 'Interface Data' >> $rexistro
   ifconfig -a >> $rexistro
   echo 'Date       Time  Public IP' >> $rexistro
@@ -69,6 +69,6 @@ else
   done
 # Finalización
   echo 
-  echo `date '+%F %H:%M' ` 'Fin de execución' >> $rexistro
+  echo `date '+%F %H:%M' ` 'End of execution' >> $rexistro
 fi
 
